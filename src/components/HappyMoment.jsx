@@ -195,7 +195,6 @@ const HappyMoment = () => {
                         <h1 className='text-[21px] leading-7 font-bold'>{motherSub?.HappyMoment_sub_5}</h1>
                         <p className='leading-6 text-[15px] text-slate-600 '>{motherSub?.HappyMoment_sub_8}</p>
                     </div>
-                    sadas
                 </div>
             </div>
            </div>
