@@ -21,8 +21,8 @@ const SlideShowTwo = () => {
     <div className={`bg-green-50 w-screen  ${pageSub === "Myanmar" ? "font-MM" : "font-EN"}`}>
         <div className='min-h-screen mx-auto w-full flex flex-col justify-center px-3 py-10 MIN1:py-12 md:py-32 lg:py-14 LL:py-0 LL:pt-16 LL:pb-5 lg:px-9 space-y-8'>
             <div className='flex flex-col MIN2:flex-row md:flex-row MIN1:justify-between MIN2:px-3 lg:px-0 xl:justify-around'>
-                <h1 className={` text-center px-[1px] font-extrabold md:font-extrabold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl text-slate-800 tracking-normal leading-[50px] lg:leading-10 ${pageSub === "English" && 'leading-[45px] text-3xl md:leading-none'}`}>{motherSub?.SlideShowTwo_title_sub}</h1>
-                <button className='select-none text-gray-200 bg-slate-800 border-2 outline-1 outline-slate-800 border-slate-800 rounded-lg tracking-wider text-sm font-extrabold px-3 py-2 hover:bg-slate-700 transition-all delay-100'>See all rooms</button>
+                <h1 className={` text-center px-[1px] font-extrabold  text-slate-800 tracking-normal leading-[50px] lg:leading-10 ${pageSub === "English" ? 'leading-[45px] text-3xl md:text-[42px] lg:text-4xl xl:text-5xl md:leading-none' : "text-[30px] sm:text-3xl MIN2:text-[28px] md:text-[36px] DD:text-[42px] "}`}>{motherSub?.SlideShowTwo_title_sub}</h1>
+                <button className='select-none text-gray-200 bg-slate-800 border-2 outline-1 outline-slate-800 border-slate-800 rounded-lg tracking-wider text-sm md:text-lg lg:text-sm font-extrabold px-3 py-2 hover:bg-slate-700 transition-all delay-100'>See all rooms</button>
             </div>
             <div className=''>
             <Swiper

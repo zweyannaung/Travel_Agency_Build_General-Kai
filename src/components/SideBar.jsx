@@ -25,7 +25,7 @@ const SideBar = () => {
             <div className='flex items-center space-x-2 text-base font-extrabold text-slate-700'><PinMapFill className='text-blue-600 text-lg'/> <h1>{motherSub?.navDrop_title_sub_1}</h1></div>
             <div className='my-3 bg-slate-300 h-[1px]'></div>
             <div className='grid grid-cols-2 gap-5'>
-              <ul className=' bg-transparent text-base font-bold text-slate-500'>
+              <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                 <li className='ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                     <a href="#">{motherSub?.navDrop_sub_1}</a>
                 </li>
@@ -45,7 +45,7 @@ const SideBar = () => {
                     <a href="#">{motherSub?.navDrop_sub_6}</a>
                 </li>
               </ul>
-              <ul className=' bg-transparent text-base font-bold text-slate-500'>
+              <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                     <li className='ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                         <a href="#">{motherSub?.navDrop_sub_7}</a>
                     </li>
@@ -68,7 +68,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-700'><ListTask className='text-blue-600 text-xl'/><h1>{motherSub?.navDrop_title_sub_2}</h1></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-                <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                   <li className='ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                       <a href="#">{motherSub?.navDrop_sub_12}</a>
                   </li>
@@ -94,7 +94,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-700'><Grid3x3Gap className='text-blue-600 text-lg'/><h1>{motherSub?.navDrop_title_sub_3}</h1></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-                <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                   <li className='ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                       <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faUmbrellaBeach} /><a href="#">{motherSub?.navDrop_sub_18}</a></div>
                   </li>
@@ -157,7 +157,7 @@ const SideBar = () => {
                 <div className='flex items-center space-x-2 text-base font-extrabold text-slate-500'><FontAwesomeIcon icon={faCity} /><h1>{motherSub?.navDrop_sub_19}</h1></div>
                 <div className='my-3 bg-slate-300 h-[1px]'></div>
                 <div>
-                  <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                  <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                     <li className='flex items-center space-x-1 ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                         <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_650/v1623088422/Shwedagon-Pagoda-Guide-Sunset/Shwedagon-Pagoda-Guide-Sunset.jpg" className='w-10 h-10 rounded-full object-cover shadow-md border border-blue-400' alt="" /> <a href="#">{motherSub?.navDrop_sub_29}</a>
                     </li>
@@ -171,7 +171,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-500'><FontAwesomeIcon icon={faUmbrellaBeach} /><h1>{motherSub?.navDrop_sub_18}</h1></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-                <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                   <li className='flex items-center space-x-1 ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                     <img src="https://myanmarbeaches.files.wordpress.com/2010/04/chaungtha7.jpg" className='w-10 h-10 rounded-full object-cover shadow-md border border-blue-400' alt="" /><a href="#">{motherSub?.navDrop_sub_32}</a>
                   </li>
@@ -185,7 +185,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-500'><FontAwesomeIcon icon={faGopuram} /><h1>{motherSub?.navDrop_sub_23}</h1></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-                <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                   <li className='flex items-center space-x-1 ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                     <img src="https://www.ancient-origins.net/sites/default/files/field/image/Temples-of-Bagan-Restoration.jpg" alt="" className='w-10 h-10 rounded-full object-cover shadow-md border border-blue-400'/><a href="#">{motherSub?.navDrop_sub_33}</a>
                   </li>
@@ -205,7 +205,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-500'><FontAwesomeIcon icon={faMountainSun} /><div>{motherSub?.navDrop_sub_21}</div></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-                <ul className=' bg-transparent text-base font-bold text-slate-500'>
+                <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                   <li className='flex items-center space-x-1 ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-300 hover:text-blue-500'>
                     <img src="https://indawgyilake.com/files/uploads/ecotourism-indawgyi-600x377.jpg" alt="" className='w-10 h-10 rounded-full object-cover shadow-md border border-blue-400'/><a href="#">{motherSub?.navDrop_sub_37}</a>
                   </li>
@@ -225,7 +225,7 @@ const SideBar = () => {
               <div className='flex items-center space-x-2 text-base font-extrabold text-slate-500'><FontAwesomeIcon icon={faBookmark} className='text-blue-500 text-lg'/><h1>{motherSub?.navDrop_title_sub_5}</h1></div>
               <div className='my-3 bg-slate-300 h-[1px]'></div>
               <div>
-              <ul className=' bg-transparent text-base font-bold text-slate-500'>
+              <ul className=' bg-transparent text-base font-semibold text-slate-500'>
                 <li className='cursor-pointer flex items-center space-x-1 ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                     <img src="https://myanmarmix.com/sites/myanmarmix.com/files/news-images/lead_2.jpg" alt="" className='w-10 h-10 object-cover rounded-full shadow-md border border-blue-400'/><a href="#">{motherSub?.navDrop_sub_41}</a>
                 </li>

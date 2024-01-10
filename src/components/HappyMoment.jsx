@@ -19,16 +19,16 @@ const HappyMoment = () => {
     const pageSub = useSelector((state) => state.dataCenter.page_sub)
     
   return (
-    <div className='bg-green-50'>
-      <div className={`space-y-5 MIN2:space-y-7 xl:space-y-10 DD:space-y-6 w-screen ${pageSub === "Myanmar" && "font-MM"} ${pageSub === "English" && "font-EN"}`}>
+    <div className='bg-green-50  w-screen'>
+      <div className={`space-y-5 MIN2:space-y-7 xl:space-y-10 DD:space-y-6 md:-mt-12 lg:mt-0 w-full ${pageSub === "Myanmar" && "font-MM"} ${pageSub === "English" && "font-EN"}`}>
         <div>
-            <h1 className={`px-5 text-2xl lg:text-5xl text-center font-black`}>Some Of Our Happy Moments</h1>
+            <h1 className={` text-center px-[1px]  text-slate-800 tracking-wide leading-[50px] lg:leading-10 ${pageSub === "English" ? 'leading-[45px] font-extrabold text-[33px] sm:text-3xl md:text-[42px] lg:text-[45px] xl:text-5xl md:leading-none' : 'font-black text-[28px] md:text-[36px] DD:text-[42px] mb-10 '}`}>{motherSub?.HappyMoment_sub_9}</h1>
         </div>
         <div className='flex flex-col xl:flex-row space-y-5 MIN2:space-y-7 xl:space-y-0 xl:space-x-6 xl:px-10 items-end'>
-            <div className='w-screen xl:w-[860px] DD:w-[1030px] 2xl:w-[1060px] LL:w-[1350px] h-[170px] MIN1:h-[210px] MIN2:h-[320px] md:h-[400px] lg:h-[515px] xl:h-[265px] DD:h-[300px] 2xl:h-[320px] LL:h-[420px] px-3 xl:px-0'>
+            <div className=' w-full xl:w-[860px] DD:w-[1030px] 2xl:w-[1060px] LL:w-[1350px] h-[170px] MIN1:h-[210px] MIN2:h-[320px] md:h-[400px] lg:h-[515px] xl:h-[265px] DD:h-[300px] 2xl:h-[320px] LL:h-[420px] px-3 lg:px-9 xl:px-0'>
                 <img className='w-full h-full object-cover object-center rounded-2xl z-40' src="https://booking.webestica.com/assets/images/category/hotel/resort/05.jpg" alt="" />
             </div>
-            <div className={`h-[600px] w-screen px-3 xl:px-0`}>
+            <div className={`h-[600px] w-screen px-3 lg:px-9 xl:px-0`}>
                 <div className=' h-full w-full rounded-2xl overflow-hidden relative'>
                     <img className='w-full h-full object-cover object-center' src="https://images.unsplash.com/photo-1571633419289-5baea827afd3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                     <div className='absolute bottom-[1.5%] MIN2:bottom-[4.5%] md:bottom-[4.2%] LL:bottom-[3%] w-[94%] MIN2:w-[59%] lg:w-[57%] xl:w-[60%] DD:w-[45%] start-[3%] MIN2:start-[4.7%] md:start-[3.5%] lg:start-[2.6%] xl:start-[3.7%] LL:start-[2%] rounded-lg h-[250px] MIN1:h-[225px] md:h-[180px] MIN3:h-[190px] lg:h-[180px] xl:h-[250px] DD:h-[270px] 2xl:h-[250px] LL:h-[220px] '>
@@ -58,6 +58,7 @@ const HappyMoment = () => {
                     disableOnInteraction: false,
                     }}
                     loop={true}
+                    speed= {600}
                     navigation={{
                     nextEl:'.next_slide',
                     prevEl:'.pre_slide'
@@ -109,7 +110,7 @@ const HappyMoment = () => {
         </div> 
         <div className='flex flex-col DD:flex-row DD:items-start space-y-12 MIN1:space-y-10'>
             <PhotoProvider>
-           <div className='w-screen DD:w-3/5 px-3 xl:px-10 foo'>
+           <div className='w-screen DD:w-3/5 px-3 lg:px-9 xl:px-10 foo'>
            <Swiper
                     slidesPerView={1}
                     spaceBetween={35}
@@ -135,11 +136,12 @@ const HappyMoment = () => {
                     disableOnInteraction: false,
                     }}
                     loop={true}
+                    speed= {600}
                     navigation={{
                     nextEl:'.next_slide',
                     prevEl:'.pre_slide'
                     }}
-                    modules={[Navigation]}
+                    modules={[Navigation,Autoplay]}
                     className="mySwiper bg-green-50 relative select-none group rounded-2xl overflow-hidden "
                 >
                 <SwiperSlide>
@@ -165,17 +167,17 @@ const HappyMoment = () => {
             </Swiper>
            </div>
             </PhotoProvider>
-           <div className={`flex flex-col space-y-3 justify-center`}>
-            <h1 className={`px-10 text-start  ${pageSub === "Myanmar" ? "" : "text-[28px] md:text-[32px] leading-8 font-bold"}`}>{motherSub?.HappyMoment_sub_1}</h1>
-            <p className='px-10 tracking-normal text-slate-600 text-[15px] leading-6'>{motherSub?.HappyMoment_sub_2}</p>
+           <div className={`flex flex-col space-y-3 justify-center lg:px-10 xl:px-5`}>
+            <h1 className={` text-start  ${pageSub === "Myanmar" ? "px-5 leading-10 md:leading-relaxed tracking-wide font-bold text-[21px] md:text-[28px] xl:text-[30px] " : "px-10 text-[28px] md:text-[32px] leading-8 font-bold"}`}>{motherSub?.HappyMoment_sub_1}</h1>
+            <p className={`px-10 tracking-normal text-slate-600 text-[15px] leading-6 ${pageSub === "Myanmar" && "leading-loose tracking-wide"}`}>{motherSub?.HappyMoment_sub_2}</p>
             <div className='flex flex-col space-y-7 md:space-y-4 py-2 px-10'>
                 <div className=' flex justify-between MIN2:justify-start space-x-4 MIN2:space-x-5'>
                     <div className='w-1/3 MIN2:w-14'>
                          <div className=' h-14 w-14 rounded-full flex items-center justify-center bg-gray-300'><FaRegThumbsUp className='text-xl text-blue-800'/></div>
                     </div>
                     <div className='space-y-2 py-2'>
-                        <h1 className='text-[21px] leading-7 font-bold'>{motherSub?.HappyMoment_sub_3}</h1>
-                        <p className='leading-6 text-[15px] text-slate-600 '>{motherSub?.HappyMoment_sub_6}</p>
+                        <h1 className={`text-[21px] leading-7 font-bold ${pageSub === 'Myanmar' && "leading-relaxed tracking-wide text-[18px] md:text-[21px] "}`}>{motherSub?.HappyMoment_sub_3}</h1>
+                        <p className={`leading-6 text-[15px] text-slate-600 ${pageSub === "Myanmar" && "leading-relaxed tracking-wide lg:leading-loose"}`}>{motherSub?.HappyMoment_sub_6}</p>
                     </div>
                 </div>
                 <div className=' flex justify-between MIN2:justify-start space-x-4 MIN2:space-x-5 '>
@@ -183,8 +185,8 @@ const HappyMoment = () => {
                         <div className=' h-14 w-14 rounded-full flex items-center justify-center bg-green-200'><FaStar className='text-xl text-yellow-500'/></div>
                     </div>
                     <div className='space-y-2 py-2'>
-                        <h1 className='text-[21px] leading-7 font-bold'>{motherSub?.HappyMoment_sub_4}</h1>
-                        <p className='leading-6 text-[15px] text-slate-600 '>{motherSub?.HappyMoment_sub_7}</p>
+                        <h1 className={`text-[21px] leading-7 font-bold ${pageSub === 'Myanmar' && "leading-relaxed tracking-wide text-[18px] md:text-[21px] "}`}>{motherSub?.HappyMoment_sub_4}</h1>
+                        <p className={`leading-6 text-[15px] text-slate-600 ${pageSub === "Myanmar" && "leading-relaxed tracking-wide lg:leading-loose"}`}>{motherSub?.HappyMoment_sub_7}</p>
                     </div>
                 </div>
                 <div className=' flex justify-between MIN2:justify-start space-x-4 MIN2:space-x-5 '>
@@ -192,8 +194,8 @@ const HappyMoment = () => {
                         <div className=' h-14 w-14 rounded-full flex items-center justify-center bg-gray-300'><BsHeadset className='text-xl text-red-800'/></div>
                     </div>
                     <div className='space-y-2 py-2'>
-                        <h1 className='text-[21px] leading-7 font-bold'>{motherSub?.HappyMoment_sub_5}</h1>
-                        <p className='leading-6 text-[15px] text-slate-600 '>{motherSub?.HappyMoment_sub_8}</p>
+                        <h1 className={`text-[21px] leading-7 font-bold ${pageSub === 'Myanmar' && "leading-relaxed tracking-wide text-[18px] md:text-[21px] "}`}>{motherSub?.HappyMoment_sub_5}</h1>
+                        <p className={`leading-6 text-[15px] text-slate-600 ${pageSub === "Myanmar" && "leading-relaxed tracking-wide lg:leading-loose"}`}>{motherSub?.HappyMoment_sub_8}</p>
                     </div>
                 </div>
             </div>

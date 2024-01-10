@@ -22,7 +22,7 @@ const FooterOne = () => {
         Speedily say has suitable disposal add boy. On forth doubt miles of child. Exercise joy man children rejoiced.
         </p>
         <div className='grid grid-cols-4 MIN2:grid-cols-6 gap-5 MIN2:gap-1 w-full md:w-[90%] lg:w-[55%] xl:w-[45%] DD:w-[38%] LL:w-[28%] text-green-50'>
-            <span className='cursor-pointer col-span-1'>About</span>
+            <span className='cursor-pointer col-span-1 '>About</span>
             <span className='cursor-pointer col-span-1'>Terms</span>
             <span className='cursor-pointer col-span-1'>Privacy</span>
             <span className='cursor-pointer col-span-1 text-end MIN2:text-start'>Career</span>

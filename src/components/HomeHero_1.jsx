@@ -10,7 +10,7 @@ const HomeHero_1 = () => {
     <>
     <div className='bg-green-100 min-h-screen w-screen lg:py-20 DD:py-10 LL:py-0 space-y-5 lg:space-y-6'>
       <div className={`flex flex-col  justify-center items-center text-center  mx-auto w-4/5   ${pageSub === "Myanmar" && 'font-MM py-14 lg:py-16 xl:py-16 DD:py-24 LL:py-36 LL:w-3/5 2xl:w-4/5 space-y-6 md:space-y-8'} ${pageSub === "English" && 'font-EN LL:w-3/6 2xl:w-2/3 py-14 lg:py-16 xl:py-16 DD:py-24 LL:py-36 space-y-2 md:space-y-10'}`}>
-          <h1 className={`w-screen px-[1px] font-bold md:font-bold  text-green-700 tracking-wide ${pageSub === "Myanmar" && 'text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-[50px] lg:leading-10'} ${pageSub === "English" && 'leading-[46px] text-4xl LL:text-5xl md:leading-none'}`}>{motherSub?.home_sub_1}</h1>
+          <h1 className={`w-screen px-[1px] font-bold md:font-bold  text-green-700 tracking-wide ${pageSub === "Myanmar" && 'text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-[50px] lg:leading-10'} ${pageSub === "English" && 'leading-[46px] text-4xl lg:text-[42px] LL:text-5xl md:leading-none'}`}>{motherSub?.home_sub_1}</h1>
           <div className={` px-5 md:px-8  w-screen lg:w-screen xl:w-full space-y-2 ${pageSub === "Myanmar" && " text-justify text-lg md:text-xl"} ${pageSub === "English" && "text-justify md:text-center text-lg md:text-xl"}`}>
             <p className={` ${pageSub === 'Myanmar' ? "leading-10": "leading-8"} tracking-wide text-slate-500 whitespace-pre-wrap`}>{motherSub?.home_sub_2}</p>
             <p className={` ${pageSub === 'Myanmar' ? "leading-10": "leading-8"} tracking-wide text-slate-500 whitespace-pre-wrap`}>{motherSub?.home_sub_3}</p>
@@ -38,7 +38,7 @@ const HomeHero_1 = () => {
           </div>
       </div>
       <div className={`w-screen px-3 lg:px-14 space-y-10 bg-green-100 ${pageSub === "Myanmar" ? 'font-MM' : "font-EN"}`}>
-        <h1 className={` text-center px-[1px] font-bold md:font-bold text-[33px] sm:text-3xl lg:text-4xl xl:text-5xl text-slate-800 tracking-wide leading-[50px] lg:leading-10 ${pageSub === "English" && 'leading-[45px] text-4xl md:leading-none'}`}>{motherSub?.slideShowOne_main_title}</h1>
+        <h1 className={` text-center px-[1px]  text-slate-800 tracking-wide leading-[50px] lg:leading-10 ${pageSub === "English" ? 'leading-[45px] font-extrabold text-[33px] sm:text-3xl md:text-[42px] lg:text-4xl xl:text-5xl md:leading-none' : "font-bold text-[28px] md:text-[36px] DD:text-[42px] "}`}>{motherSub?.slideShowOne_main_title}</h1>
         <SlideShowOne/>
       </div>
     </div>
