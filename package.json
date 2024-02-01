@@ -26,6 +26,7 @@
     "react-router-dom": "^6.20.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.10.4",
     "swiper": "^11.0.5",
     "venobox": "^2.1.3"
   },

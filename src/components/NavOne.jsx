@@ -4,10 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach,faCity,faSpa,faMountainSun,faGolfBallTee,faGopuram } from '@fortawesome/free-solid-svg-icons'
 import { PatchCheckFill } from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+// import AboutPlace from './AboutPlace'
 
 const NavOne = () => {
     const pageSub = useSelector((state) => state.dataCenter.page_sub)
     const motherSub = useSelector((state) => state.dataCenter.mother_sub)
+    const motherSub_link = useSelector((state) => state.dataCenter.englishSub)
+    const goingAboutHandler = () => {
+        
+    }
   return (
     <div className=''>
         <div className= {` px-8 py-14 rounded-2xl bg-gray-50 space-y-5 ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
@@ -17,41 +23,63 @@ const NavOne = () => {
                 <div className='my-3 bg-slate-300 h-[1px]'></div>
                 <div className='grid grid-cols-2 gap-5'>
                     <ul className=' bg-transparent text-base font-semibold text-slate-500'>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_1}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_2}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_3}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_4}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_5}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_6}</a>
-                        </li>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_1}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_1}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_2}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_2}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_3}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_3}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_4}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_4}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_5}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_5}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_6}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_6}</button>
+                            </li>
+                        </Link>
                     </ul>
                     <ul className=' bg-transparent text-base font-semibold text-slate-500'>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_7}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_8}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_9}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_10}</a>
-                        </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
-                            <a href="#">{motherSub?.navDrop_sub_11}</a>
-                        </li>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_7}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_7}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_8}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_8}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_9}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_9}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_10}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_10}</button>
+                            </li>
+                        </Link>
+                        <Link to={`/Destination_Of_Myanmar/${motherSub_link?.navDrop_sub_11}`}>
+                            <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                                <button>{motherSub?.navDrop_sub_11}</button>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </div>

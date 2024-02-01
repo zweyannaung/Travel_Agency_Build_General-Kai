@@ -5,6 +5,7 @@ const initialState = {
         nav_sub_1 : "ဆောင်ရွက်နိုင်သည့် အရာများ",
         nav_sub_2 : "သွားလာလည်ပတ်ရန် နေရာများ",
         nav_sub_3 : "သင်၏ ခရီးစဉ်",
+        nav_sub_4 : "ဆက်တင်များ",
         navDrop_title_sub_1 : "တည်နေရာ ဦးတည်ချက်များ",
         navDrop_title_sub_2 : "တည်းခိုရန် နေရာများ",
         navDrop_title_sub_3 : "အမျိုအစားများ",
@@ -124,6 +125,7 @@ const initialState = {
         nav_sub_1 : "Things To Do",
         nav_sub_2 : "Place To Go",
         nav_sub_3 : "Plan Your Trip",
+        nav_sub_4 : "Setting",
         navDrop_title_sub_1 : "Destination",
         navDrop_title_sub_2 : "Hotel Type",
         navDrop_title_sub_3 : "Category",
@@ -246,6 +248,159 @@ const initialState = {
         Subscribe_sub_2 : "May the touriste visiting Myanmar have good days and dream of enchanting Myanmar.",
         Footer_sub_1 : "Our business has been operating since 2016",
     },
+    Destination_Of_Myanmar_Images : {
+        'Yangon' : {
+            image_1 : "https://www.grandmercure.com/wp-content/uploads/2020/04/YANGON_3-shutterstock_403828075__001-2200x1200.jpg",
+            image_2 : "https://www.wendywutours.com.au/resource/upload/734/banner-yangon.jpg",
+            image_3 : "https://i.pinimg.com/564x/7e/62/e8/7e62e84620cc2354f8010d88daea270a.jpg",
+            image_4 : "https://i.pinimg.com/564x/95/d3/d1/95d3d1e759bf0fbd16136cc71d495905.jpg",
+            image_5 : "https://i.pinimg.com/564x/58/80/4b/58804b12ee8c6bf9299e108118997ce1.jpg",
+            image_6 : "https://i.pinimg.com/564x/e2/b8/5e/e2b85e38e15f17051c8ead224007b8f3.jpg",
+        },
+        'Mandalay' : {
+            image_1 : "https://i.pinimg.com/originals/d4/66/27/d46627cb8f1b76eaf3e01f4f882eda39.jpg",
+            image_2 : "https://i.pinimg.com/564x/2c/f2/3a/2cf23ace34500fca0e2c5eaa55c28902.jpg",
+            image_3 : "https://m.media-amazon.com/images/I/71HQO0GKQTL._AC_SX679_.jpg",
+            image_4 : "https://i.pinimg.com/564x/54/83/0f/54830ffdf990f7b36719e1e9b701a527.jpg",
+            image_5 : "https://i.pinimg.com/564x/ec/e7/d9/ece7d9fac03c4b15535bdb487ee76deb.jpg",
+            image_6 : "https://i.pinimg.com/564x/7d/37/bd/7d37bd2ac637db2cb9f3f841f284eff4.jpg",
+        },
+        'Bagan' : {
+            image_1 : "https://envoyexcellency.com/wp-content/uploads/2023/12/Temples-of-Bagan-Restoration.jpg",
+            image_2 : "https://i.pinimg.com/564x/02/cf/c5/02cfc58317efad1ae780857a036c5588.jpg",
+            image_3 : "https://www.asiapearltravels.com/images/hotels/kumudara_hotel_on_bagan_map.jpg",
+            image_4 : "https://i.pinimg.com/564x/85/61/ab/8561ab37ebae710223b40ad29db658bd.jpg",
+            image_5 : "https://i.pinimg.com/564x/ca/f6/8d/caf68de6af037ec5c8d9ef9bcb8424f7.jpg",
+            image_6 : "https://i.pinimg.com/564x/5d/d1/b5/5dd1b515bb59c0031820c56cf0432742.jpg",
+        },
+        'Pyin Oo Lwin' : {
+            image_1 : "https://i.pinimg.com/originals/cc/0f/f2/cc0ff21533d1a991805f90a42a2c1929.jpg",
+            image_2 : "https://d13jio720g7qcs.cloudfront.net/images/tours/800_450/5644052fa6feb.jpg",
+            image_3 : "https://4.bp.blogspot.com/-ZPb-hjxHYyM/UuSAqbCrZNI/AAAAAAAAZPM/SCkQgDFRUC0/s1600/pyinoolwin_map.gif",
+            image_4 : "https://i.pinimg.com/564x/bc/58/3f/bc583f42d0bdb9f8d43d9e3ed0ca56e7.jpg",
+            image_5 : "https://i.pinimg.com/564x/e3/d2/18/e3d218c40acff95df9bf0236c21978da.jpg",
+            image_6 : "https://i.pinimg.com/564x/bf/b2/f7/bfb2f7bca1a85e1f9dda08a642f7db78.jpg",
+        },
+        'Taung Gyi' : {
+            image_1 : "https://upload.wikimedia.org/wikipedia/commons/b/b9/Shwe_Bone_Pwint_Pagoda%2C_Taunggyi%2CShan.jpg",
+            image_2 : "https://miro.medium.com/v2/resize:fit:650/1*F1vWlgd8GdG3qnQVSlDleg.jpeg",
+            image_3 : "https://maps-myanmar.com/img/1200/taunggyi-myanmar-map.jpg",
+            image_4 : "https://i.pinimg.com/564x/74/29/a3/7429a311541e3869484b7755c775537e.jpg",
+            image_5 : "https://i.pinimg.com/564x/18/b7/4f/18b74ff49a1de384610069f8a13ab570.jpg",
+            image_6 : "https://i.pinimg.com/564x/c0/02/7b/c0027bfd74c322a147d1cfc27ae8dcec.jpg",
+        },
+        'Kalaw' : {
+            image_1 : "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Kalaw_0.jpg",
+            image_2 : "https://i.pinimg.com/564x/bc/e7/98/bce79827af0bde8e78cad7811ca1e280.jpg",
+            image_3 : "https://cdn.sanity.io/images/ul272611/production/acd840628acd1f8d82be459b363d1e6cd5e4d42c-1046x1065.jpg?rect=0,9,1046,1046&w=1200&h=1200&fit=max&auto=format",
+            image_4 : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/ad/65/54/peut-etre-pas-tres-birman.jpg?w=600&h=400&s=1",
+            image_5 : "https://i.pinimg.com/564x/8e/ff/5b/8eff5bad20b2670e1723547d0b1461b8.jpg",
+            image_6 : "https://i.pinimg.com/564x/cb/df/c9/cbdfc94125916203e026e9763f603941.jpg",
+        },
+        'Mawlamyine' : {
+            image_1 : "https://burmatravel.com/myanmar-photos/2016/04/golden-rock-Kyaikhtiyo-myanmar-2-1.jpg",
+            image_2 : "https://as1.ftcdn.net/v2/jpg/04/62/72/64/1000_F_462726409_6n4T0EGgWKoouIWLa7BGM5rZYS9YTApM.jpg",
+            image_3 : "https://m.media-amazon.com/images/I/71fsFTbVo2L._AC_SX679_.jpg",
+            image_4 : "https://d13jio720g7qcs.cloudfront.net/images/destinations/origin/5d15c37ce5aec.jpg",
+            image_5 : "https://i.pinimg.com/564x/1e/c6/1f/1ec61f7d81947b6f0b54820f728a9b51.jpg",
+            image_6 : "https://i.pinimg.com/564x/e3/d2/53/e3d253706f1b0e75e72cc38eea13b8f4.jpg",
+        },
+        'Indaw Gyi' : {
+            image_1 : "https://kdng.org/wp-content/uploads/2018/12/Indawgyi-Lake-gets-UNESCO-designation.jpg",
+            image_2 : "https://ttgasia.2017.ttgasia.com/wp-content/uploads/sites/2/2017/08/Indawgyi-Lake.jpg",
+            image_3 : "https://indawgyilake.com/sites/indawgyilake.com/files/northern-img/maplake90_1.png?t=1706415599439",
+            image_4 : "https://i.pinimg.com/564x/05/bd/c4/05bdc4bd85dba0550c6eabcd9ca7a0e8.jpg",
+            image_5 : "https://i.pinimg.com/564x/f2/b0/c1/f2b0c1ddae49d2e8d54f36ae046350f1.jpg",
+            image_6 : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Indawgyi_Lake.JPG/800px-Indawgyi_Lake.JPG",
+        },
+        'Inlay' : {
+            image_1 : "https://www.vietnamparadisetravel.com/wp-content/uploads/i/40/Inle-Lake.jpg",
+            image_2 : "https://i.pinimg.com/564x/b6/2c/20/b62c206d93cb82e70781f3c744762787.jpg",
+            image_3 : "https://images.squarespace-cdn.com/content/v1/545012a9e4b0988576f6b699/3dce29b9-783d-4769-b4cf-85247fa3f23b/inle-lake-tourist-guide-map.png",
+            image_4 : "https://i.pinimg.com/564x/7c/77/51/7c77513e302b3fe8272411913b355cf9.jpg",
+            image_5 : "https://i.pinimg.com/564x/01/83/4e/01834e19bc7dd8aa675ce4b93993f849.jpg",
+            image_6 : "https://myanmartrains.info/wp-content/uploads/2019/02/Hpaung-Daw-U-Pagoda-near-Inle-Lake.jpg",
+        },
+        'Puta-O' : {
+            image_1 : "https://www.travelloops.com/userfiles/putao.jpg",
+            image_2 : "https://images.hive.blog/0x0/https://steemitimages.com/DQmVXQEcXjCNFjnfhRY9B51csiebsRr5F7QkNWW2BdDhvow/FB_IMG_1505095562812.jpg",
+            image_3 : "https://rainforestjournalismfund.org/sites/default/files/styles/height_500/public/protected_areas_map_0.png.webp?itok=bQFLY0Np",
+            image_4 : "https://cdn.myanmarseo.com/file/client-cdn/2023/12/997ACC7B-656E-4417-A00D-CE7C7FE87B15.jpeg",
+            image_5 : "https://i.pinimg.com/564x/9d/b9/2c/9db92ce77068257a9b5b37d202f745d6.jpg",
+            image_6 : "https://media.istockphoto.com/id/1341407209/photo/rural-karst-landscape.jpg?s=612x612&w=0&k=20&c=NS2qtCzgcGbh4gHI3FIITC5fBlERKuTcP_pHGjgefic=",
+        },
+        'Rakhine' : {
+            image_1 : "https://beta.myanmarvoyages.com/wp-content/uploads/2020/09/Oriental-Ballooning-Ngapali-13.jpg",
+            image_2 : "https://miro.medium.com/v2/resize:fit:650/1*08lwNiDTLZW3HhsH4b5Jkw.jpeg",
+            image_3 : "https://upload.wikimedia.org/wikipedia/commons/8/80/Map_of_Rakhine_%28Arakan%29_State_in_Myanmar.png",
+            image_4 : "https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0d/c3/19/73/ko-thaung-temple-3.jpg",
+            image_5 : "https://i.pinimg.com/564x/51/97/7e/51977ea565f94184b2851600e26ac50e.jpg",
+            image_6 : "https://i.pinimg.com/564x/7d/df/1e/7ddf1ec59ab38b003a5e6ed017808c1b.jpg",
+        },
+    },
+    Destination_Of_Myanmar_EnglishSub:{
+        'Yangon' : {
+            text_1:"Yangon",
+            text_2:"About Of",
+            text_3:"Facts Of",
+            text_4:"Fascination",
+            text_5:"History Of",
+            text_6:"Top Attractions",
+            text_7:"Of Yangon",
+            para_text_1:"Formerly known as Rangoon, Yangon is a historical city and one of the most well-known cities in the country. Yangon was Myanmar’s administrative capital before Nay Pyi Taw was named as the capital city. Yangon is the country’s most prominent commercial centre as well as the largest city of the country with a population of more than 7 million people. The name ‘Yangon’ is a combination of the Burmese words ‘Yan’ meaning ‘enemies’ and ‘Koun’ meaning ‘run out of’. The combination of words commonly translates as ‘End of Strife’. During the colonial era, Yangon was called ‘Rangoon’. Till the mid-1990s, Yangon mostly had a traditional setting. As people started moving in, a necessity to expand the area of the city was felt. The city grew rapidly towards the north where the Yangon International Airport is located now.",
+            para_text_2:"The local people in the city are very friendly and hospitable. They will understand you even if you don’t have a common language to communicate.The streets of Yangon are dotted with street food vendors selling fresh and yummy local cuisine. Don’t miss trying everything!",
+            para_text_3:"Yangon has a rich history behind it which dates back to the 11th century when the Mons who lived in Lower Burma the city and named it Dagon. It was a small fishing village centred around the Shwedagon Pagoda. When King Alaungpaya took over Dagon in 1755, he changed the name to Yangon. The British conquered Yangon after the First Anglo-Burmese War (1824-1826) but returned Yangon back to Burmese administration as the war ended. They seized Yangon and lower Burma moved to after the Second Anglo-Burmese War in 1852. Yangon was the epicentre of Myanmar’s struggle for independence. When Myanmar gained independence in 1948, Yangon was made the capital of the country.",
+            
+        },
+        'Mandalay' : {
+            text_1:"Mandalay",
+            text_2:"About Of",
+            text_3:"Facts Of",
+            text_4:"Fascination",
+            text_5:"History Of",
+            text_6:"Top Attractions",
+            text_7:"Of Mandalay",
+            para_text_1:"Formerly known as Rangoon, Yangon is a historical city and one of the most well-known cities in the country. Yangon was Myanmar’s administrative capital before Nay Pyi Taw was named as the capital city. Yangon is the country’s most prominent commercial centre as well as the largest city of the country with a population of more than 7 million people. The name ‘Yangon’ is a combination of the Burmese words ‘Yan’ meaning ‘enemies’ and ‘Koun’ meaning ‘run out of’. The combination of words commonly translates as ‘End of Strife’. During the colonial era, Yangon was called ‘Rangoon’. Till the mid-1990s, Yangon mostly had a traditional setting. As people started moving in, a necessity to expand the area of the city was felt. The city grew rapidly towards the north where the Yangon International Airport is located now.",
+            para_text_2:"The local people in the city are very friendly and hospitable. They will understand you even if you don’t have a common language to communicate.The streets of Yangon are dotted with street food vendors selling fresh and yummy local cuisine. Don’t miss trying everything!",
+            para_text_3:"Yangon has a rich history behind it which dates back to the 11th century when the Mons who lived in Lower Burma the city and named it Dagon. It was a small fishing village centred around the Shwedagon Pagoda. When King Alaungpaya took over Dagon in 1755, he changed the name to Yangon. The British conquered Yangon after the First Anglo-Burmese War (1824-1826) but returned Yangon back to Burmese administration as the war ended. They seized Yangon and lower Burma moved to after the Second Anglo-Burmese War in 1852. Yangon was the epicentre of Myanmar’s struggle for independence. When Myanmar gained independence in 1948, Yangon was made the capital of the country.",
+            
+        },
+        'Bagan' : {},
+        'Pyin Oo Lwin' : {},
+        'Taung Gyi' : {},
+        'Kalaw' : {},
+        'MawlamyIne' : {},
+        'Indaw Gyi' : {},
+        'Inlay' : {},
+        'Puta-O' : {},
+        'Rakhine' : {},
+    },
+    Destination_Of_Myanmar_MyanmarSub:{
+        'Yangon' : {
+            text_1:"ရန်ကုန်",
+            text_2:"About Of",
+            text_3:"Facts Of",
+            text_4:"Fascination",
+            text_5:"History Of",
+            text_6:"Top Attractions",
+            text_7:"Of Yangon",
+            para_text_1:"Formerly known as Rangoon, Yangon is a historical city and one of the most well-known cities in the country. Yangon was Myanmar’s administrative capital before Nay Pyi Taw was named as the capital city. Yangon is the country’s most prominent commercial centre as well as the largest city of the country with a population of more than 7 million people. The name ‘Yangon’ is a combination of the Burmese words ‘Yan’ meaning ‘enemies’ and ‘Koun’ meaning ‘run out of’. The combination of words commonly translates as ‘End of Strife’. During the colonial era, Yangon was called ‘Rangoon’. Till the mid-1990s, Yangon mostly had a traditional setting. As people started moving in, a necessity to expand the area of the city was felt. The city grew rapidly towards the north where the Yangon International Airport is located now.",
+            para_text_2:"The local people in the city are very friendly and hospitable. They will understand you even if you don’t have a common language to communicate.The streets of Yangon are dotted with street food vendors selling fresh and yummy local cuisine. Don’t miss trying everything!",
+            para_text_3:"Yangon has a rich history behind it which dates back to the 11th century when the Mons who lived in Lower Burma the city and named it Dagon. It was a small fishing village centred around the Shwedagon Pagoda. When King Alaungpaya took over Dagon in 1755, he changed the name to Yangon. The British conquered Yangon after the First Anglo-Burmese War (1824-1826) but returned Yangon back to Burmese administration as the war ended. They seized Yangon and lower Burma moved to after the Second Anglo-Burmese War in 1852. Yangon was the epicentre of Myanmar’s struggle for independence. When Myanmar gained independence in 1948, Yangon was made the capital of the country.",
+            
+        },
+        'mandalay' : {},
+        'Bagan' : {},
+        'Pyin Oo Lwin' : {},
+        'Taung Gyi' : {},
+        'Kalaw' : {},
+        'MawlamyIne' : {},
+        'Indaw Gyi' : {},
+        'Inlay' : {},
+        'Puta-O' : {},
+        'Rakhine' : {},
+    },
+    Destination_Of_Myanmar : {},
     mother_sub : {},
     page_sub : "English",
 }
@@ -254,15 +409,26 @@ export const DataCenter = createSlice({
     name:'dataCenter',
     initialState,
     reducers : {
-        start_language : (state) => {
-            state.mother_sub = state.englishSub
+        start_language : (state,action) => {
+            if(action.payload === 'English'){
+                state.mother_sub = state.englishSub
+                state.Destination_Of_Myanmar = state.Destination_Of_Myanmar_EnglishSub
+            }else if(action.payload === 'Myanmar'){
+                state.mother_sub = state.myanmarSub
+                state.Destination_Of_Myanmar = state.Destination_Of_Myanmar_MyanmarSub
+            }else{
+                state.mother_sub = state.englishSub
+                state.Destination_Of_Myanmar = state.Destination_Of_Myanmar_EnglishSub
+            }
         },
         change_Myanmar_sub : (state) => {
             state.mother_sub = state.myanmarSub
+            state.Destination_Of_Myanmar = state.Destination_Of_Myanmar_MyanmarSub
             state.page_sub = "Myanmar"
         },
         change_English_sub : (state) => {
             state.mother_sub = state.englishSub
+            state.Destination_Of_Myanmar = state.Destination_Of_Myanmar_EnglishSub
             state.page_sub = "English"
         },
        

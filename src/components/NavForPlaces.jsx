@@ -9,19 +9,26 @@ import SideBar from './SideBar'
 import 'animate.css';
 import './themeMode.css';
 import { SiYourtraveldottv } from "react-icons/si";
+import { useParams } from 'react-router-dom'
 
-const Nav = () => {
+
+const NavForPlaces = () => {
+    const {destinationName} = useParams()
     const pageSub = useSelector((state) => state.dataCenter.page_sub)
     const motherSub = useSelector((state) => state.dataCenter.mother_sub)
+    const Destination_Of_Myanmar_Images = useSelector((state) =>state.dataCenter.Destination_Of_Myanmar_Images[destinationName])
+    const Destination_Of_Myanmar = useSelector((state) =>state.dataCenter.Destination_Of_Myanmar[destinationName])
+
     const gettingIdOne = useRef()
     const gettingIdTwo = useRef()
     const [isTrue , setIsTrue] = useState(false) 
     const dispatch = useDispatch()
- 
+
     useEffect(()=>{
-        dispatch(start_language('English'))
+        dispatch(start_language(pageSub))
     },[])
 
+ 
     const changeEngSub = (e) =>{
         e.preventDefault()
         dispatch(change_English_sub())
@@ -92,56 +99,23 @@ const Nav = () => {
   
         }
     }
-    
   
   return (
     <>
-    <div className={`h-[545px] MIN1:h-[550px] MIN2:h-[580px] md:h-[600px] lg:h-screen xl:h-screen LL:h-[960px] relative shadow-2xl shadow-[#4A2D14] ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
-        {/* +++++ heroLanding image +++++ */}
-        <div className=' w-full absolute h-full  lg:top-0 bg-gradient-to-tr from-gray-900 to-orange-500 md:bg-transparent'>
-            <img src="https://r4.wallpaperflare.com/wallpaper/276/889/111/man-made-bagan-hot-air-balloon-myanmar-wallpaper-e4064e4202dec0d5576f29b044e46894.jpg?timestamp=1699275877250" className='hidden w-full h-full lg:block object-none xl:object-cover object-center'/>       
-            <img src="https://i.pinimg.com/736x/2a/38/04/2a3804cb1b06f8a8c2f922191ea5c674.jpg" className='block w-full h-full lg:hidden object-cover object-center MIN1:object-top  mix-blend-overlay'/>       
-        </div>
+    <div className={` ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
         {/* +++++ Nab Bar +++++ */}
-        <nav className="w-screen bg-transparent  dark:bg-gray-900 absolute top-0 px-0 md:px-5 py-5 z-40">
-            <div className="container flex mx-auto items-center justify-between p-4">
-                {/* +++++ Logo +++++ */}
-                <a href="#" className="flex items-center space-x-1 md:space-x-2">
-                <SiYourtraveldottv className='text-blue-900 md:text-blue-800 text-5xl'/>
-                    <span className='test-sm md:text-2xl hidden md:block text-blue-700 md:text-blue-900 lg:text-blue-700 font-black md:font-semibold lg:font-bold tracking-wide'  style={{textShadow:"2px 2px violet"}}>Travel Agency</span>
-                </a>
+        <nav className="LL:w-full relative mx-auto shadow-2xl myShadow">
+            <div className=' LL:h-[800px] bg-gradient-to-tr from-slate-600 to-slate-600 shadow-lg shadow-slate-700'>
+                <img src={Destination_Of_Myanmar_Images?.image_1} className='w-full h-full mix-blend-overlay object-none xl:object-cover object-center'/>       
+                <div className='border-2 w-[865px] h-[510px] absolute top-[18%] left-[20%] flex items-center justify-center text-[180px] font-semibold text-slate-50 border-slate-100'>
+                    {Destination_Of_Myanmar?.text_1}
+                </div>
+                {/* <img src="https://i.pinimg.com/736x/2a/38/04/2a3804cb1b06f8a8c2f922191ea5c674.jpg" className='block w-full h-full lg:hidden object-cover object-center MIN1:object-top  mix-blend-overlay'/>        */}
+            </div>
+            <div className="container absolute top-0 bg-transparent flex mx-auto items-center justify-between p-4">
+               
                 {/*+++++ Language Change +++++*/}
-                <div className="flex items-center md:order-2 space-x-2 gap-0 md:gap-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button" data-dropdown-toggle="language-dropdown-menu" className="text-sm select-none inline-flex items-center w-20 md:w-24  justify-center md:px-3 md:py-2 px-1 py-1 md:text-base font-semibold lg:font-bold text-gray-100 xl:text-green-50 dark:text-white border border-gray-500 xl:border-green-50 rounded-lg cursor-pointer  dark:hover:bg-gray-700 dark:hover:text-white hover:font-extrabold hover:border-2 focus:font-extrabold focus:border-2">
-                        {pageSub}
-                    </button>
-                    
-                    <div className="z-50 hidden  my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
-                        <ul className="py-2 font-medium" role="none">
-                        <li onClick={changeMMSub}>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div className="inline-flex items-center">
-                                Burmese (Myanmar)
-                            </div>
-                            </a>
-                        </li>
-                        <li onClick={changeEngSub}>
-                            <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                            <div className="inline-flex items-center">
-                                English (US)
-                            </div>
-                            </a>
-                        </li>
-                        
-                        </ul>
-                    </div>
-                    <button onClick={changeSideBar} type="button" className="lg:block inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-xl bg-transparent active:bg-sky-600  xl:hidden " aria-controls="navbar-default" aria-expanded="false">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>
-                </div> 
+                
                 {/* ===== Nav DropDown ===== */}
                 <div id='navSideBar' className='fixed overflow-hidden hidden animate__animated animate__faster transition-all top-0 left-0 w-screen h-screen bg-gray-50 py-6 px-3'>
                     <div>
@@ -155,8 +129,8 @@ const Nav = () => {
                     <li  className=''>
                         <button onMouseOver={showDropOne} onMouseOut={hideDropOne} className=' flex items-center font-semibold  tracking-wider text-base lg:text-sm xl:text-base py-5 transition-all rounded text-gray-100 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'>{motherSub?.nav_sub_1}<ChevronDown className='ms-2'/></button>
                         {/* ==========  drop down one   ==========   */}
-                        <div className='w-screen absolute left-0'>
-                            <div className='container mx-auto px-20 2xl:px-52 LL:px-72 '>
+                        <div className='w-full absolute left-0 z-10'>
+                            <div className=' px-20 2xl:px-52 LL:px-32 '>
                                 <div ref={gettingIdOne} onMouseOver={thisIsDropOne} onMouseOut={thisIsDropOne} id="dropdownHover1" className= 'animate__animated animate__faster transition-all duration-300 hidden'>
                                     <NavOne/>
                                 </div>
@@ -166,8 +140,8 @@ const Nav = () => {
                     <li  className=''>
                         <button onMouseOver={showDropTwo} onMouseOut={hideDropTwo} className=' flex items-center font-semibold  tracking-wider text-base py-5 transition-all rounded text-gray-100 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-800'>{motherSub?.nav_sub_2}<ChevronDown className='ms-2'/></button>
                         {/* ==========  drop down two  ========== */}
-                        <div className='w-screen absolute left-0'>
-                            <div className='container mx-auto px-20 2xl:px-52 LL:px-72 '>
+                        <div className='w-full absolute left-0'>
+                            <div className='container mx-auto px-20 2xl:px-52 LL:px-12 '>
                                 <div ref={gettingIdTwo} onMouseOver={thisIsDropTwo} onMouseOut={thisIsDropTwo} id="dropdownHover2" className='animate__animated animate__faster transition-all  duration-300  hidden'>
                                     <NavTwo/>
                                 </div>
@@ -214,17 +188,14 @@ const Nav = () => {
                     </ul>
                 </div>
             </div>
-        </nav>
-        {/* ===== hero landing text ======== */}
-        <div className={`absolute top-[6%]  w-full h-full font-bold text-sky-200 lg:text-sky-50 flex items-center text-center flex-col justify-center ${pageSub === "Myanmar" ? 'text-3xl md:text-4xl lg:text-5xl xl:text-6xl space-y-3 md:space-y-5 lg:space-y-7 xl:space-y-12' : 'space-y-5 2xl:space-y-8 text-5xl md:text-6xl lg:text-7xl xl:text-8xl'} `} >
-            <div className={`font-bold tracking-wide ${pageSub === "Myanmar" ? 'leading-[55px]' : 'leading-[60px]'}`}><span>{motherSub?.heroLand_sub_1}</span> <span className=' md:hidden'>{motherSub?.heroLand_sub_2}</span></div>
-            <h1 className={`font-bold tracking-wide hidden md:block ${pageSub === "Myanmar" ? 'leading-[60px]' : ''}`}>{motherSub?.heroLand_sub_2}</h1>
-            <h6 className='text-green-100 px-3 lg:text-gray-50 text-xl md:text-2xl font-bold tracking-wide leading-[30px] md:leading-10'>{motherSub?.heroLand_sub_3}</h6>
-            <button className='select-none text-gray-200 bg-orange-500 lg:bg-slate-900 border-2 outline-1 border-orange-500 lg:border-slate-900 rounded-2xl tracking-wider text-base font-bold px-5 py-2 lg:py-3 hover:bg-slate-800 transition-all delay-100'>{motherSub?.heroLand_sub_4}</button>
+        
+        <div className='LL:w-[550px] LL:h-[350px] absolute -bottom-[20%] left-[5%] rounded-lg border-2 shadow-lg shadow-slate-700 overflow-hidden border-slate-600 bg-gray-500'>
+            <img className='w-full h-full object-center object-cover' src={Destination_Of_Myanmar_Images?.image_2} alt="" />
         </div>
+        </nav>
     </div>
     </>
   )
 }
 
-export default Nav
+export default NavForPlaces

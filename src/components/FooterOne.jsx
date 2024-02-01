@@ -11,7 +11,7 @@ const FooterOne = () => {
     const pageSub = useSelector((state) => state.dataCenter.page_sub)
   return (
     <div className={` bg-[#0B0A12] ${pageSub === "Myanmar" ? "font-MM" : "font-EN"}`}>
-      <div className='flex flex-col h-[500px] MIN2:h-[400px] px-10 justify-center items-center space-y-8 DD:space-y-6 w-screen'>
+      <div className='flex flex-col h-[500px] MIN2:h-[400px] px-10 justify-center items-center space-y-8 DD:space-y-6 min-w-full'>
         <div className=''>
             <a href="#" className="flex items-center space-x-1 md:space-x-2">
             <SiYourtraveldottv className='text-blue-700 text-5xl md:text-[58px] ' />
