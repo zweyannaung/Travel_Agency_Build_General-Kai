@@ -11,7 +11,7 @@ const AboutPlace = () => {
     const motherSub = useSelector((state) => state.dataCenter.mother_sub)
   return (
     <div className={`bg-gradient-to-bl from-[#05102A] to-green-100`}>
-      <div className={`LL:w-3/4 min-h-screen mx-auto  myShadow ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
+      <div className={`w-screen xl:w-11/12 DD:w-4/5 2xl:w-3/4 LL:w-3/4 min-h-screen mx-auto  myShadow ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
         <NavForPlaces/>
         <Places/>
       </div>

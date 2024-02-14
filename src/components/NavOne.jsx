@@ -5,6 +5,7 @@ import { faUmbrellaBeach,faCity,faSpa,faMountainSun,faGolfBallTee,faGopuram } fr
 import { PatchCheckFill } from 'react-bootstrap-icons'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 // import AboutPlace from './AboutPlace'
 
 const NavOne = () => {
@@ -14,6 +15,10 @@ const NavOne = () => {
     const goingAboutHandler = () => {
         
     }
+     // #######  Unfinish Alert #######
+  const modalAlert = () => {
+    Swal.fire("This Part Is Unfinish Yet!");
+  }
   return (
     <div className=''>
         <div className= {` px-8 py-14 rounded-2xl bg-gray-50 space-y-5 ${pageSub === "Myanmar" && 'font-MM'} ${pageSub === "English" && 'font-EN'}`}>
@@ -88,22 +93,22 @@ const NavOne = () => {
                 <div className='my-3 bg-slate-300 h-[1px]'></div>
                 <div>
                 <ul className=' bg-transparent text-base font-semibold text-slate-500'>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_12}</a>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_13}</a>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_14}</a>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_15}</a>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_16}</a>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <a href="#">{motherSub?.navDrop_sub_17}</a>
                         </li>
                     </ul>
@@ -114,22 +119,22 @@ const NavOne = () => {
             <div className='my-3 bg-slate-300 h-[1px]'></div>
             <div>
                 <ul className=' bg-transparent text-base font-semibold text-slate-500'>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faUmbrellaBeach} /><a href="#">{motherSub?.navDrop_sub_18}</a></div>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faCity} /><a href="#">{motherSub?.navDrop_sub_19}</a></div>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faSpa} /><a href="#">{motherSub?.navDrop_sub_20}</a></div>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faMountainSun} /><a href="#">{motherSub?.navDrop_sub_21}</a></div>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faGolfBallTee} /><a href="#">{motherSub?.navDrop_sub_22}</a></div>
                         </li>
-                        <li className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
+                        <li onClick={modalAlert} className='cursor-pointer ps-5 py-2 duration-700 border border-transparent rounded-lg hover:bg-slate-200 hover:text-blue-500'>
                             <div className='flex items-center space-x-2'><FontAwesomeIcon icon={faGopuram} /><a href="#">{motherSub?.navDrop_sub_23}</a></div>
                         </li>
                     </ul>

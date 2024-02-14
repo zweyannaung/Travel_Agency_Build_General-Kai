@@ -74,11 +74,9 @@ const SlideShowOne = (swiperSlide1 = swiperSlide) => {
           </div>
         </SwiperSlide>}
         <SwiperSlide>
-          <div
-              className="menu cursor-pointer relative w-full bg-transparent bg-gradient-to-t from-black border border-gray-300 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="menu cursor-pointer relative w-full bg-transparent bg-gradient-to-t from-black border border-gray-300 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
             <div className='h-[410px] MIN:h-[440px] MIN2:h-[350px] md:h-[475px] lg:h-[380px] xl:h-[380px] DD:h-[410px] 2xl:h-[450px] LL:h-[580px]'>
-              <img className="rounded-2xl mix-blend-overlay"
-                   src="https://www.alluringworld.com/wp-content/uploads/2016/12/2-Mandalay-Palace.jpg" alt=""/>
+              <img className="rounded-2xl mix-blend-overlay" src="https://www.alluringworld.com/wp-content/uploads/2016/12/2-Mandalay-Palace.jpg" alt=""/>
             </div>
             <div className={`handleUp transition-all ${pageSub === "Myanmar" && 'space-y-2 md:space-y-3 '} ${pageSub === "English" && 'space-y-2'} duration-300 p-5 absolute bottom-0 text-start text-white`}>
               <h1 className={` ${pageSub === "Myanmar" && 'text-2xl MIN2:text-xl 2xl:text-3xl font-black'} ${pageSub === "English" && 'text-2xl MIN2:text-xl md:text-2xl lg:text-3xl 2xl:text-3xl font-black tracking-wide lg:tracking-normal'}`}>{motherSub?.navDrop_sub_30}</h1>

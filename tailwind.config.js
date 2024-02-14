@@ -13,6 +13,7 @@ export default {
         "MIN1":"414px",
         "MIN2": "600px",
         "MIN3": "800px",
+        "xl2" : "1366px",
         "DD" : "1440px",
         "LL" : "1920px"
       },
@@ -27,4 +28,4 @@ export default {
   ],
 }
 
-
+// 

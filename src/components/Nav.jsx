@@ -9,6 +9,7 @@ import SideBar from './SideBar'
 import 'animate.css';
 import './themeMode.css';
 import { SiYourtraveldottv } from "react-icons/si";
+import Swal from 'sweetalert2'
 
 const Nav = () => {
     const pageSub = useSelector((state) => state.dataCenter.page_sub)
@@ -92,7 +93,10 @@ const Nav = () => {
   
         }
     }
-    
+    // #######  Unfinish Alert #######
+    const modalAlert = () => {
+    Swal.fire("This Part Is Unfinish Yet!");
+    }
   
   return (
     <>
@@ -174,8 +178,8 @@ const Nav = () => {
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <a href="#" className='flex items-center font-semibold  tracking-wider text-base py-5 transition-all delay-100 rounded text-gray-100 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'>{motherSub?.nav_sub_3}</a>
+                    <li onClick={modalAlert}>
+                        <button className='flex items-center font-semibold  tracking-wider text-base py-5 transition-all delay-100 rounded text-gray-100 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'>{motherSub?.nav_sub_3}</button>
                     </li>
                     <li>
                         {/* ============ drop down three ============= */}
